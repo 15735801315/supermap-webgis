@@ -1,23 +1,49 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside style="float:left"  width="200px">Aside</el-aside>
+        <el-main>
+          <Map/>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <script>
+import Map from './components/Map.vue'
 export default {
-  name: 'App'
-}
+  name: 'App',
+  components: {
+    Map,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .el-header {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 685px;
+  }
+  
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 685px;
+    padding: 0px;
+  }
+  
+
 </style>
