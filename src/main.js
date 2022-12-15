@@ -6,6 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import VueiClient from '@supermap/vue-iclient-mapboxgl'
 import 'element-ui/lib/theme-chalk/index.css'
+import store from './store/index'
 
 let theme = {
   textColor: '#eee',
@@ -23,6 +24,7 @@ VueiClient.setTheme({ theme })
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

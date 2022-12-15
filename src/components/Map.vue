@@ -41,9 +41,8 @@
    
   <style>
   #main {
-    margin: 0 auto;
-    width: 1288px;
-    height: 685px;
-    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   </style>
