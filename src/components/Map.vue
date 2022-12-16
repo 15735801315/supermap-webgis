@@ -2,7 +2,9 @@
 <template>
   <div id="main">
      <!-- 使用地图组件 -->
-     <sm-web-map :map-options="mapOptions"></sm-web-map>
+     <sm-web-map :map-options="mapOptions">
+      <sm-zoom :show-zoom-slider="true"></sm-zoom>
+     </sm-web-map>
   </div>
   </template>
   <script>
@@ -31,8 +33,8 @@
               'maxzoom': 22
             }]
           },
-          center: [120.143, 30.000], // 地图中心点
-          zoom: 3 // 地图初始缩放级别
+          center: [104.300, 30.500], // 地图中心点
+          zoom: 8 // 地图初始缩放级别
         }
       }
     }

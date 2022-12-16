@@ -32,7 +32,6 @@
 
         <el-main class="sys-content">
           <router-view></router-view>
-          <Map />
         </el-main>
       </el-container>
     </el-container>
@@ -40,23 +39,23 @@
 </template>
 
 <script>
-// import Map from './components/Map';
+import Map from './components/Map.vue';
 export default {
   name: 'App',
   components: {
-    // Map,
+    Map,
   },
   methods: {
     handleMenuSelect(index) {
       console.log(index);
-      if (index === '1') {
-        //跳转到首页大屏
-        this.$router.push('/');
-      } else if (index === '2') {
+      if (index === '4') {
         //跳转到一张图
         // this.$router.push() 可以通过修改url实现路由跳转
         this.$router.push('/onemap');
-      }
+      }   else  {
+        //跳转到首页大屏
+        this.$router.push('/');
+      } 
     },
   },
 };
